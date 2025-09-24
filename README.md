@@ -1,0 +1,2 @@
+# Konspekt_Artjom_Mihhailenko_IKTpv25_2
+Minu konspekt
