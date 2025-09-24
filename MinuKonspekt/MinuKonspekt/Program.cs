@@ -154,7 +154,33 @@ namespace MinuKonspekt
                 case "qwerty" or "1234":
                     Console.WriteLine("Parool on sobimatu, palun mingi muu");
                     break;
-            }      
+            }
+
+
+            //5 värvituvastus
+
+            Console.WriteLine("Milline värv sulle kõige rohkem meeldib?: ");
+            string favoriteColor = Console.ReadLine();
+            switch (favoriteColor)
+            {
+                default:
+                    Console.WriteLine("Värvi ei tunne");
+                    break;
+                case "punane":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    break;
+                case "oranz":
+                    Console.WriteLine("Kahjuks oranzi ei ole");
+                    break;
+                case "kollane":
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    break;
+                case "roheline":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    break;
+            }
+            Console.WriteLine("Värv muudetud!");
+
         }
     }
 }
