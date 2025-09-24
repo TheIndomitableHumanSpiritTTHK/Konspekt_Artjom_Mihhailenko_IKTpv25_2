@@ -59,6 +59,34 @@ namespace MinuKonspekt
             }
 
 
+            //2.3 mitu vahemikku, switch abil, double/float
+            Console.WriteLine($"Sisesta oma pikkus ka, palun, {nimi}: ");
+            double pikkus = double.Parse(Console.ReadLine());
+
+            switch (pikkus)
+            {
+                default:
+                    Console.WriteLine("Pikkust ei tunta");
+                    break;
+                case < 1.00d:
+                    Console.WriteLine("Oled juntsu");
+                    break;
+                case < 1.25d and > 1.00d:
+                    Console.WriteLine("Oled peaaegu allameetrimees");
+                    break;
+                case < 1.50d and > 1.25d:
+                    Console.WriteLine($"Päkapikk enam ei olegi {nimi}!");
+                    break;
+                case < 1.75d and > 1.50d:
+                    Console.WriteLine("Oled enamasti standardpikkus, kui mitte just natuke lühike");
+                    break;
+                case < 2.00d and > 1.75d:
+                    Console.WriteLine("Pikk kolge, vaata et sa pead vastu uksepiita ära ei löö");
+                    break;
+                case > 2.00d:
+                    Console.WriteLine("Täielik tulnukas, kuidas pilved välja näevad?");
+                    break;
+            }
         }
     }
 }
