@@ -135,6 +135,26 @@ namespace MinuKonspekt
 
 
             Console.WriteLine("Tulemus: " + tulemus);
+
+
+
+            // 4. parool
+
+            Console.WriteLine("Programmi edasiseks tööks sisesta palun parool: ");
+            string parool = Console.ReadLine();
+
+            switch (parool)
+            {
+                default:
+                    Console.WriteLine("Parool on vale, proovi uuesti");
+                    break;
+                case "secret":
+                    Console.WriteLine("Parool on õige, aarete laegas avaneb");
+                    break;
+                case "qwerty" or "1234":
+                    Console.WriteLine("Parool on sobimatu, palun mingi muu");
+                    break;
+            }      
         }
     }
 }
