@@ -183,6 +183,51 @@ namespace MinuKonspekt
 
 
 
+            int muutuja = 3;
+            // int          -> on muutuja nime ees olev andmetüübi kirjeldus, mis näitab ära, millist 
+            //                 tüüpi andmed sell muutuja sees on
+            // "muutuja"    -> on nimetus, ehk muutuja, mis hoiab endas mingeid andmed, inimloetava
+            //                 ja mil abil saab neid addresseerida koodi sees
+            // =            -> üksis võrdusmärk omistab muutuja sisse vastava väärtuse mis asub teiselpool võrdusmärki
+            // 3            -> muutujale omistatav väärtus
+            /* Võimalikud adnmetüübid mida vaja võib minna: */
+            int a = 1; // int on täisarv
+            decimal b = 2.1M; // decimal on kümnendsüsteemis olev komakohaga arv
+            float c = 3.9f; // float on 32-bitine komakohaga arv
+            double d = 5.6d; // double on 64-bitine komakohaga arv
+            char c1 = 'a'; // üksainus täht või tähemark mis tähistatakse ülakomadega ''
+            string s = "tekst"; // tähtedest koosnev sõna või teks, tähistatakse jutumärkidega **
+
+            var x = "abc"; // var on ebamääruse andmetüübiga kohalik muutuja
+            var y = 123;  // ta võib omaga endas teisi andmetüüpe
+            const int z = 9; // konstant tüüpi muutujaid ei saa muuta, nende sisu on read only
+
+            int liitmine = 1 + 1; // liitmine, kaks arvu liidetakse kokku
+            int lahutamine = 1 - 1; // lahutamine, kus esimesest arvust lahutatakse maha teine
+            double korrutamine = 1*2; // korrutamine, kus teine arv korrutatakse esimese arvu kordi
+            double jagamine = 1 / 2; // jagamine, esimene arv jagatakse teise arvuga
+            double astendamine = Math.Pow(2, 2); //astendamine
+            double juurimine = Math.Sqrt(2);  // ruutjuur, parametrina juritav arv
+
+            // muutuja nimed
+            int arv = 0;
+            string sõna = "abc";
+            // string string = "abc"; // kaitstud sõna kasutada ei saa
+
+            // muutuja nimeks ei sobi järgnevad sõnad
+            // abstract, as, base, bool, break, byte, case,
+            // catch, char, checked, class, count, continue, decimal,
+            // default, delegate, do, double, else, enum, event,
+            // explicit, extern, false, finally, fixed, float, for
+            // foreach, goto, if, implicit, in, int, interface, internal
+            // is, lock, long, namespace, new, null, object, operator
+            // out, override, params, private, protected, public, readonly,
+            // ref, return, sbyte, sealed, short, sizeof, stackalloc
+            // static, string, struct, switch, this, throw, try, typeof
+            // uint, ulong, unchecked, ushort, using, virtual
+            // void, volatile, while.
+
+
             Console.WriteLine("Tere. Sisestage esimene number");
             // Addresseerime moodulit "Console", punkti abil ütleme, et kasutame funktsiooni WriteLine
             // selle jaoks et öelda kasutajale sõnum, mis asub funktsiooni nime järel sulgude vahel
