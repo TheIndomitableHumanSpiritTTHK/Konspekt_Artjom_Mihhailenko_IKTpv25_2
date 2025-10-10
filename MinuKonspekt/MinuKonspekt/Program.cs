@@ -181,6 +181,153 @@ namespace MinuKonspekt
             }
             Console.WriteLine("Värv muudetud!");
 
+
+
+            Console.WriteLine("Tere. Sisestage esimene number");
+            // Addresseerime moodulit "Console", punkti abil ütleme, et kasutame funktsiooni WriteLine
+            // selle jaoks et öelda kasutajale sõnum, mis asub funktsiooni nime järel sulgude vahel
+            // ümbritsetuna jutumärkidega
+
+            int arv1_ = int.Parse(Console.ReadLine());
+            // instantsieerime muutuja nimega "arv1", ning selle ette anname andmetüübiks "int", see
+            // ütleb ära, et siin muutujas on täisarvud sees. Omistame muutujale võrdusmärgi abil
+            // väärtuse, mille saame kasutajalt. Selle jaoks, addresseerime uuesti "Console" moodulit
+            // Aga seekord on funktsiooni nimi "ReadLine". Selleks, et käsureapealt tulev arv programmile
+            // tekstina ei näe välja, küsime int mooduli seest omakorda funktsiooni "Parse", ning paneme
+            // ReadLine funktsiooni Parse() sulgude vahele
+
+
+
+            Console.WriteLine("Nüüd sisestage teine number");
+            // Addresseerime moodulit "Console", punkti abil ütleme, et kasutame funktsiooni WriteLine
+            // selle jaoks et öelda kasutajale sõnum, mis asub funktsiooni nime järel sulgude vahel
+            // ümbritsetuna jutumärkidega
+
+            int arv2_ = int.Parse(Console.ReadLine());
+            // instantsieerime muutuja nimega "arv1", ning selle ette anname andmetüübiks "int", see
+            // ütleb ära, et siin muutujas on täisarvud sees. Omistame muutujale võrdusmärgi abil
+            // väärtuse, mille saame kasutajalt. Selle jaoks, addresseerime uuesti "Console" moodulit
+            // Aga seekord on funktsiooni nimi "ReadLine". Selleks, et käsureapealt tulev arv programmile
+            // tekstina ei näe välja, küsime int mooduli seest omakorda funktsiooni "Parse", ning paneme
+            // ReadLine funktsiooni Parse() sulgude vahele
+
+
+            Console.WriteLine("Noh aga mis me teeme?");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "Noh aga mis me teeme?". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            Console.WriteLine("1. liitmine (+)");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "1. liitmine (+)". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            Console.WriteLine("2. jagamine (/)");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "2. jagamine (/)". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            Console.WriteLine("3. korrutamine (*)");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "3. korrutamine (*)". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            Console.WriteLine("4. lahutamine (-)");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "4. lahutamine (-)". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            Console.WriteLine("5. Astendamine (^)");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // "5. Astendamine (^)". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+
+
+            Console.WriteLine("Palun sisestage oma valik (1,2,3, 4 või 5): ");
+            // Addresseerime moodulit "Console", koos "WriteLine" funktsiooniga, et esitada kasutajale küsimuse
+            // ""Palun sisestage oma valik (1,2,3, 4 või 5): ". Punkti abil saame moodulist Console, funktsiooni
+            // WriteLine, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+            // jutumärkidega. Lause lõpeb lauselõpumärgiga ";".
+
+            int valik_ = int.Parse(Console.ReadLine());
+            // instantsieerime muutuja nimega "arv1", mille ette anname andmetüübiks "int", see
+            // ütleb ära, et siin muutujas on täisarvud sees. Omistame muutujale võrdusmärgi abil
+            // väärtuse, mille saame kasutajalt. Selle jaoks, addresseerime uuesti "Console" moodulit
+            // funktsiooni nimi "ReadLine". Selleks, et käsureapealt tulev arv programmile
+            // tekstina ei näe välja, küsime int mooduli seest omakorda funktsiooni "Parse", ning paneme
+            // ReadLine funktsiooni Parse() sulgude vahele
+
+            double tulemus_ = 0;
+            // instantsieerime muutuja nimega "tulemus", andmetüübiga int, ning omistame talle algse
+            // väärtuse võrdusmärgi abil, milleks on 0. Lause lõpeb lauselõpumärgiga ";".
+
+
+            // alustame tingimus lause switch, ning selle tingimuse määrame ära sulgudega, mille vahel
+            // paneme "valik_" muutuja ja edasi vaatame, kas see muutuja vastab mingisugusele tingimusele, mis on koodiplookis {} sulgudes
+            switch (valik_)
+            {
+                // määrasime toimingu juhuks, kui muutuja "valik_" ei vasta ühelegi meie tingimusele, selleks kasutame "default",
+                // mille järel paneme kooloni, et näidata funktsiooni edasisi toiminguid.
+                default:
+                    throw new Exception("Vale valik. Proovige uuesti.");
+                    // viskame erindi (Exception), mis ütleb, et valik oli vale ja kutsub kasutajat proovima uuesti
+                    // seetõttu kasutame "throw" tingimus, kus instatsieerime uus Exception, ning sulgude vahel ongi kasutajale esitatav tekst. Tekst ise on ka ümbritsetud
+
+                // määrame toimingu juhuks, kui muutuja "valik_" vastab ühele meie tingimusele ja on võrdne arvuga 1
+                // Selleks kasutame "case", mille järel määrame väärtuse, millele "valik_ " peab vastama, et töötaks koodiplokk, mis kirjutatakse kooloni märgi järele
+                case 1:
+                    tulemus_ = arv1_ + arv2_;
+                    break;
+                    // kui valik on 1, liidame kaks arvu ning salvestame tulemuse muutujasse "tulemus_". 
+                    // sellises lauses omistame muutujale "tulemus" võrdusmärgi abil liitmistehte tulemuse,
+                    // kus liidame kokku muutuja "arv1_" ja muutuja "arv2_" sisu.
+
+                    // selleks, et programmile õelda, et koolonile järgneva koodiploki
+                    // tingimused on lõppenud, peame sellest väljuma, näiteks käsuga "break"
+
+
+                // määrame toimingu juhuks, kui muutuja "valik_" vastab ühele meie tingimusele ja on võrdne arvuga 2
+                // Selleks kasutame "case", mille järel määrame väärtuse, millele "valik_ " peab vastama, et töötaks koodiplokk, mis kirjutatakse kooloni märgi järele
+                case 2:
+                    tulemus_ = arv1_ / arv2_;
+                    break;
+                    // kui valik on 2, jagame kaks arvu ning salvestame tulemuse muutujasse "tulemus_". 
+                    // sellises lauses omistame muutujale "tulemus" võrdusmärgi abil jagamistehte tulemuse,
+                    // kus liidame kokku muutuja "arv1_" ja muutuja "arv2_" sisu.
+
+                    // selleks, et programmile õelda, et koolonile järgneva koodiploki
+                    // tingimused on lõppenud, peame sellest väljuma, näiteks käsuga "break"
+
+                // määrame toimingu juhuks, kui muutuja "valik_" vastab ühele meie tingimusele ja on võrdne arvuga 3
+                // Selleks kasutame "case", mille järel määrame väärtuse, millele "valik_ " peab vastama, et töötaks koodiplokk, mis kirjutatakse kooloni märgi järele
+                case 3:
+                    tulemus_ = arv1_ * arv2_;
+                    break;
+                // määrame toimingu juhuks, kui muutuja "valik_" vastab ühele meie tingimusele ja on võrdne arvuga 4
+                // Selleks kasutame "case", mille järel määrame väärtuse, millele "valik_ " peab vastama, et töötaks koodiplokk, mis kirjutatakse kooloni märgi järele
+                case 4:
+                    tulemus_ = arv1_ - arv2_;
+                    break;
+
+
+
+                // määrame toimingu juhuks, kui muutuja "valik_" vastab ühele meie tingimusele ja on võrdne arvuga 5
+                // Selleks kasutame "case", mille järel määrame väärtuse, millele "valik_ " peab vastama, et töötaks koodiplokk, mis kirjutatakse kooloni märgi järele
+                case 5:
+                    tulemus = Math.Pow(arv1, arv2);
+                    break;
+            }
+
+            Console.WriteLine("Tulemus: " + tulemus);
+            // Kasutame moodulist "Console" punkti abil funktsiooni "WriteLine" et kuvada kasutajale tehte tulemus.
+            // Selle jaoks on WriteLine funktsioonis parameetrina pandud muutuja "tulemus" ilma tekstiks teisendamata
         }
     }
 }
