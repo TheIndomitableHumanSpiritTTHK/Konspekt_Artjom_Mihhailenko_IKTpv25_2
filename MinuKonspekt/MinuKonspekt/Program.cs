@@ -182,6 +182,95 @@ namespace MinuKonspekt
             Console.WriteLine("Värv muudetud!");
 
 
+            //# Kolija kalkulaator - Kirjuta programm mis:
+            //#    - Küsib kasutajalt kas ta tahab ära mõõta pappkasti või õlitünni.
+            //#    - olenevalt kasutaja sisestusest küsib ta:
+            //#    - - tünni jaoks:
+            //#    - - - kas kasutaja teab põhja raadiust (r) või põhja läbimõõtu (d):
+            //#    - - - tünni kõrgust
+            //#    - - - kaane paksust (kaane paksus võtab tünni kõrgusest maha, kuna kaan võtab tünni sisust natuke ruumi)
+            //#    - - - Arvutab tünni ruumala mahu, tünni küljepindala, tünni kogupindala
+            //#    - - kasti jaoks:
+            //#    - - - Kas kast on kuubiku kujuline või risttahuka kujuline
+            //#    - - - - kui on kuubik, siis küsib kasutajalt ainult küljepikkust
+            //#    - - - - kui on risttahukas siis küsib kasutajalt:
+            //#    - - - - - pikima külje pikkust, 
+            //#    - - - - - lühima külje pikkust ja
+            //#    - - - - - kasti kõrgust
+            //#    - - arvutab vastavalt kasti kogupindala, mahu, ja pikima läbiva joone (d)
+
+            Console.WriteLine("Kas te tahate ära mõõta pappkasti või õlitunni?");
+            string valik1 = Console.ReadLine();
+            
+            if (valik1 == "pappkast")
+            {
+                Console.WriteLine("Kas kast on kuubiku kujuline või risttahuka kujuline?");
+                string kasttüüp = Console.ReadLine();
+
+                if (kasttüüp == "kuubik")
+                {
+                    Console.WriteLine("Mis on kasti küljepikk?");
+                    int kastiküljepikk = int.Parse(Console.ReadLine());
+
+                    int V = kastiküljepikk * kastiküljepikk * kastiküljepikk; // объем
+                    int S = (kastiküljepikk * kastiküljepikk) * 6;
+
+                } else if (kasttüüp == "risttahukas")
+                {
+                    Console.WriteLine("Mis on pikim küljepikkus?");
+                    int pikimküljepikkus = int.Parse(Console.ReadLine()); // a
+                    
+                    Console.WriteLine("Mis on lühim küljepikkus?");
+                    int lühimküljepikkus = int.Parse(Console.ReadLine());  // b ?
+
+                    Console.WriteLine("Mis on kasti kõrgus?");
+                    int kastikõrgus = int.Parse(Console.ReadLine());  // h
+
+                    int S_risttahukas = 2 * ((pikimküljepikkus * lühimküljepikkus) + (pikimküljepikkus * kastikõrgus) + (lühimküljepikkus * kastikõrgus));
+                    int V_risttahukas = pikimküljepikkus * lühimküljepikkus * kastikõrgus;
+                }
+            }
+            else if (valik1 == "tünn")
+            {
+                Console.WriteLine("Kas sa tead tünni raadiust R või läbimõõtu D");
+                string rvõid = Console.ReadLine();
+
+                Console.WriteLine("Mis on selle raadius või läbimõõt? metrites");
+                double kasutajamõõt = double.Parse(Console.ReadLine());
+
+
+                Console.WriteLine("Kui kõrge on sinu tünn? meetrites");
+                double kõrgus = double.Parse(Console.ReadLine());
+                
+                
+                Console.WriteLine("Kui paks on sinu tünn? meetrites");
+                double kaanepaksus = double.Parse(Console.ReadLine());
+
+                double Sp = 0;
+                switch (rvõid)
+                {
+                    default:
+                        break;
+                    case "R":
+                        Sp = Math.PI * (kasutajamõõt * kasutajamõõt);
+                        break;
+                    case "D":
+                        kasutajamõõt = kasutajamõõt / 2;
+                        Sp = Math.PI * (kasutajamõõt * kasutajamõõt);
+                        break;
+                }
+
+                double V = 0;
+                kõrgus = kõrgus - kaanepaksus;
+                V = Sp * kõrgus;
+
+                // arvutame küljepindala
+                kõrgus += kaanepaksus;
+                double Sk = 2 * Math.PI * kasutajamõõt * kõrgus;
+
+                double S = Sp + Sk;
+                Console.WriteLine($"Sinu tünn mahutab {V}\nTünni küljepindala on {Sk}\nTünni kogupindala on {S}");
+            }
 
             int muutuja = 3;
             // int          -> on muutuja nime ees olev andmetüübi kirjeldus, mis näitab ära, millist 
