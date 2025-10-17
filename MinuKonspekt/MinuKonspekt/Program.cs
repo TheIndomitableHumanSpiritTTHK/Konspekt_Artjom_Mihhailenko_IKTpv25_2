@@ -462,6 +462,115 @@ namespace MinuKonspekt
             Console.WriteLine("Tulemus: " + tulemus);
             // Kasutame moodulist "Console" punkti abil funktsiooni "WriteLine" et kuvada kasutajale tehte tulemus.
             // Selle jaoks on WriteLine funktsioonis parameetrina pandud muutuja "tulemus" ilma tekstiks teisendamata
+
+            //string kasutajaNimi = "";
+            //do
+            //{
+            //    Console.WriteLine("Palun sisesta oma kasutajanimi: ");
+            //    kasutajaNimi = Console.ReadLine();
+            //} while (kasutajaNimi != "user1");
+
+            //if (kasutajaNimi == "user1")
+            //{
+            //    int ruuduSuurus = 0;
+
+            //    do
+            //    {
+            //        Console.WriteLine("Kui suurt ruutu saada tahad?");
+            //        ruuduSuurus = int.Parse(Console.ReadLine());
+            //    } while (ruuduSuurus < 0 || ruuduSuurus > 20);
+
+            //    char reaKujund = 'Æ';
+            //    string üksRida = "";
+
+            //    int tsükliMuutuja = ruuduSuurus;
+
+            //    do
+            //    {
+            //        üksRida = üksRida + "_" + reaKujund;
+            //        tsükliMuutuja = tsükliMuutuja - 1;
+            //    } while (tsükliMuutuja != 0);
+
+            //    tsükliMuutuja = ruuduSuurus;
+
+            //    do
+            //    {
+            //        Console.WriteLine(üksRida);
+            //        tsükliMuutuja -= 1;
+            //    }
+            //    while (tsükliMuutuja != 0);
+
+            //    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruuduSuurus}x{ruuduSuurus}");
+            //}
+
+            /* Tingimuslause osad */
+            if (true) { }       // kaitsus sõna if kutsub esile tingimuslause, mille tingimus on sulgude vahel, ning millele järgneb
+                                // koodiplokk tingimuse täitumisel teostatava koodiga
+            else if (false) { } // kaitstus sõnad "else" ja "if" kutsuvad esile sekundaarse tingimuslause, mille tingimus
+                                //  on samamoodi sulgude vahel, ning millele peab eelnema alat kas "if" või teine "else if". Tingimuse täitumisel
+                                // ja eelneva tingimuse mittetäitumisel, teostatakse koodiplooki sees olev kood
+            else { }            // kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas "if" või "else if", ning mille koodiploki sisu
+                                // täidetakse kõikide teiste "if" ja "else if" tingimuste läbikukkumisel
+
+
+            /* Loogilised tehted */
+            // &&       -> "and" loogiline tehe, mida kasutatakse tingimuste kirjeldamisel, ning mis annam positiivse vastuse (true) juhul kui
+            //              mõlemal pool && märki olevad tingimused on täidetud. Kui üks neist ei ole, siis annab negatiivse vastuse (false)
+
+            // ||       -> "or"! loogiline tege, mida kasutatakse tingimuste tingimuste kirjeldamisel, ning mis annab positiivse vastuse (true) siis kui 
+            //             vähemalt üks tingimus on täidetud. Negatiivne vastus (false) tagastatakse siis, kui kõik tingimused on täitmata
+
+
+            // !        -> "not" loogiline tehe, mida kasutatakse tingimuse tulemuse inverteerimiseks. Tulemus, mis muidu tagastaks (true)
+            //             hüüumargi abil tagastab (false), ja vastupidi - tulemus mis muidu tagastaks (false), hüüumärgi abil tagastab (true)
+
+
+            /* Võrdlusoperaatorid */
+
+            // ==       -> "on võrdne". Võrdusmärkide ühel pool olev objekt peab vastama täpselt oma olemuselt võrdusmärkide teise pool oleva
+            //              objektiga. Ei ole sama nagu üks võrgusmärk, üks võrdusmärk omistab, kaks võrdleb
+
+
+            // !=       -> "ei ole võrdne". Võrdusmärgi ühel pool olev objekt *EI TOHI* olla samal kujul nagu võrdusmärgi teisel pool olev objekt.
+            //          Ta võib olla ükskõik mis muul kujul, aga mitte võrreldava objektiga samal kujul. Võrdlus operaator on kombinatsioon
+            //          "on võrdne" operaatorist, ja loogiliselt tehtest "not"
+
+            // >        -> "on suurem kui". Märgist vasakul pool olev objekt peaks olema suurem, kui parema pool olev objekt. 
+            // <        -> "on väiksem kui". Märgist vasakul pool olev objekt peaks olema väiksem, kui parema pool olev objekt.
+            // >=       -> "suuremvõrdne". Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või suurem kui parempoolne objekt
+            //          Võrdlusoperaator on kombinatsioon "on võrdne" ja "on suurem kui" operaatoritest.
+            // <=       -> "väiksemvõrdne". Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või väiksem kui parempoolne objekt
+            //          Võrdlusoperaator on kombinatsioon "on võrdne" ja "on väiksem kui" operaatoritest.
+
+
+            /* Omistusoperaatorid ja kiirtehted */
+
+            int thing = 1; // = -> üksis võrdusmärk omistab muutuja sisse väärtuse, mida saab kasudata, läbi muutuja nime
+            thing += 1; // += -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu
+                        //       asendeb tehed "thing = thing +1;". on kombinatsioon matemaatiliselt tehtest "+" ja omistamisest "="
+
+            thing -= 1; // -= -> võrdusmärk mille ees on miinus, automaatselt lauhtab muutujast maha võrdusmärgi teisel pool oleva arvu
+                        //       asendab tehet "thing = thing - 1;". on kombinatsioon matemaatiliselt tehtest "-" ja omistamisest "="
+            
+            thing *= 2; // *= -> võrdusmärk mille ees on korrutustmärk "*", automaatselt korrutab muutuja sisu, võrdusmärgi teisel pool
+                        //       oleva arvu kordi. asendab tehet "thing = thing * 2". on kombinatsioon tehtest "*" ja omistamisest "="
+
+
+            thing /= 2; // /= -> võrdusmärk mille ees on jagamismärk "/", automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva
+                        //       arvu osadeks. asendab tehet "thing = thing / 2". on kombinatsioon tehtest "/" ja omistamisest "="
+
+
+            thing++;     // ++ -> on spetsiifiliselt ühe juurde liitmiseks kiirtehe
+            thing--;     // -- -> on spetsiifiliselt ühe maha lahatamiseks kiirtehe
+
+
+
+            /* Tsüklid */
+            // 1. do-while. 
+            do // on kaitstud sõna, mis alustab do-while tsüklit. Pärast seda on tsükliplokk {} ning ütleb et tee seda koodi
+            {
+
+            } while (true); // niikaua kuni while järel olevate sulgude vahel tingimus ei täitu, käivitakse eelne kood uuesti
         }
     }
 }
