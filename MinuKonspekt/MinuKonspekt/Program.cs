@@ -463,6 +463,28 @@ namespace MinuKonspekt
             // Kasutame moodulist "Console" punkti abil funktsiooni "WriteLine" et kuvada kasutajale tehte tulemus.
             // Selle jaoks on WriteLine funktsioonis parameetrina pandud muutuja "tulemus" ilma tekstiks teisendamata
 
+            Console.WriteLine("Sisesta ostusumma");
+            double ostusumma = double.Parse(Console.ReadLine());
+            switch (ostusumma)
+            {
+                default:
+                    Console.WriteLine("Sisestatud on vigane arv");
+                    break;
+                case > 100:
+                    Console.WriteLine("Saad 20% allahindlust!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    break;
+                case < 101 and > 50:
+                    Console.WriteLine("Saad 10% allahindlust.");
+                    break;
+                case < 51 and > 20:
+                    Console.WriteLine("5% allahidlust.");
+                    break;
+                case < 21 and > 0:
+                    Console.WriteLine("allahindlust ei saa");
+                    break;
+            }
+
+
             //string kasutajaNimi = "";
             //do
             //{
