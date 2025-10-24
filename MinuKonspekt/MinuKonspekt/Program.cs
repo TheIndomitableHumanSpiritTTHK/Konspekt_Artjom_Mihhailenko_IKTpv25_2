@@ -533,6 +533,34 @@ namespace MinuKonspekt
                                 // ja eelneva tingimuse mittetäitumisel, teostatakse koodiplooki sees olev kood
             else { }            // kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas "if" või "else if", ning mille koodiploki sisu
                                 // täidetakse kõikide teiste "if" ja "else if" tingimuste läbikukkumisel
+            int option = 3;     // 
+            switch (option)     // switch on kaitstud sõna alternatiivse tingimuskontrolli jaoks mida saab if else-if asemel kasutada
+                                // sulgude vahele käib muutuja nimi mille põhjal tingimuslik ümberlülitus toimub. siin sulgude vahel 
+                                // ei ole tingimus ise, vaid kõigest kontrollitab muutuja, või omakorda sulgude vahel muu tingimus.
+                                // pärast lülitusvalikut tuleb koodiplokk 
+            {
+                case 1:         // koodiplooki sees on erinevad juhtumid, juhtumit sätestatakse kaitstud sõna case abil. antud juhul kontrollitakse
+                                // kas muutujas "option" on väärtus 1, millele järgned koolon ":" väljendades tingimuse täitimisel tehtava
+                                // kooditegevuse algust
+                    break;      // kui tegevus on tehtud, väljutakse mitte ainult juhtumist, vaid kogu käesoleva "case"-tingimustikust kaitstud
+                                // sõnaga "break". peale breaki on lauselõppumärk ";".
+                case 2:         // Juhtumeid võib olla mitmeid, antud juhul on neid kolm nindlalt
+                    break;
+                case 3:
+                    Console.WriteLine(option); // tehtav kooditegevus
+                    break;
+                default:        // default juhtumit täidetakse siis, kui ülejäänud juhtumid ei kirjelda muutujas "option" olevat seisu.
+                    break;      // ka default lõpeb sõnaga "break".
+            }
+
+            /* Sõne tööristad ja muud tekstiga seotut */
+            string alfa = "a\nb";           // \n -> tekitab ühe sõne sisse reamurde, sõne kus on sees üks "\n", omab kahte rida.
+            string beta = $"a {alfa} b";    // $ -> lubab kasutada muutujaid loogiliste sulgudega otse teksti sees. on variant
+                                            //      formateeritud stringist.
+
+
+
+
 
 
             /* Loogilised tehted */
@@ -589,10 +617,24 @@ namespace MinuKonspekt
 
             /* Tsüklid */
             // 1. do-while. 
+            int d = 0;
             do // on kaitstud sõna, mis alustab do-while tsüklit. Pärast seda on tsükliplokk {} ning ütleb et tee seda koodi
             {
+                d++
+            } while (d != 5); // niikaua kuni while järel olevate sulgude vahel tingimus ei täitu, käivitakse eelne kood uuesti
 
-            } while (true); // niikaua kuni while järel olevate sulgude vahel tingimus ei täitu, käivitakse eelne kood uuesti
+            // 2. while
+            int i = 1;          // tsükli muutuja, mis aitab järgepidada while tsükli toimimisel
+            while (i < 5)       // "while" on kaitstud sõna mis alustab while tsükli varianti, ilma "do"ta, ning vajab alati välist 
+                                // tsüklimuutujat. Antud juhul on selleks i. Tsükli tingimus, mis peale "while" sõna on, asub sulgude vahel, 
+                                // siin kontrooliktasegi tsükli tööd, läbi kindla tingimuse kasutades tsüklimuutujat.
+                                // Antud juhul tsükkel töötab niikaua, kuni i on väiksem kui 5. kui i on sama suur nagu 5, siis tsükkel
+                                // katkeb.
+            {
+                // koodiplokk kus midagi tehakse
+                i++; // ning seejärel muudetakse tsüklimuutuja "i" olekut. antud juhul liidetakse 1 juurde kiirtehega "++".
+            }
+
         }
     }
 }
